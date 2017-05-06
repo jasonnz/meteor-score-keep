@@ -4,6 +4,13 @@ import {Meteor} from 'meteor/meteor';
 
 Meteor.startup(()=> {
     let name = 'App'
-    let jsx = <p>Hello {name}</p>;
+    let title = 'Score Keep';
+    let jsx = (
+        <div>
+            <h1>{title}</h1>
+            <p>Hello {name}</p>
+            <p>This is my second P</p>
+        </div>
+    );
     ReactDOM.render(jsx, document.getElementById('app'));
 });
