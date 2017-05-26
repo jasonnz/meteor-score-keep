@@ -2,11 +2,9 @@ import {Meteor} from 'meteor/meteor';
 import {Players} from './../imports/api/players';
 
 Meteor.startup(()=> {
-    Players.insert({
-        name: 'Jules',
-        score: 32
-    });
-
-    console.log(Players.find({}).fetch());
-    
+    // Players.insert({
+    //     name: 'Burger',
+    //     score: 21
+    // });
+    // console.log(Players.find({}).fetch());
 });
