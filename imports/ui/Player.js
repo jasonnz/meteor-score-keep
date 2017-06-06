@@ -5,7 +5,6 @@ import {Players} from './../api/players';
 export default class Player extends React.Component {
     render() {
          return (
-             
             <p key={this.props.player._id}>
                 {this.props.player.name} has {this.props.player.score} point(s).
                 <button onClick={()=> Players.update({_id : this.props.player._id}, {$inc: {score:1} })}>+1</button>

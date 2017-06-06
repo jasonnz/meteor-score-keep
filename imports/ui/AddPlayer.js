@@ -1,6 +1,5 @@
 import React from 'react';
-
-import {Players} from './../api/players'
+import {Players} from './../api/players';
 
 export default class AddPlayer extends React.Component {
     handleSubmit(e) {
