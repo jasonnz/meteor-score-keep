@@ -4,10 +4,9 @@ import {Meteor} from 'meteor/meteor';
 import {Tracker} from 'meteor/tracker';
 
 import {Players}  from './../imports/api/players';
-import TitleBar   from './../imports/ui/TitleBar';
-import AddPlayer  from './../imports/ui/AddPlayer';
+import App        from './../imports/ui/App';
 import Player     from './../imports/ui/Player';
-import PlayerList from './../imports/ui/PlayerList';
+
 
 Meteor.startup(()=> {
     Tracker.autorun(()=> {
@@ -16,12 +15,9 @@ Meteor.startup(()=> {
         let subTitle = 'This is the sub title';
         let jsx = (
             <div>
-                <TitleBar title={title} subTitle={subTitle}/>
-                {/** Render Add Player here. **/}
-                <PlayerList players={players}/>
-                <AddPlayer/>
+             
             </div>
         );
-        ReactDOM.render(jsx, document.getElementById('app'));
+        ReactDOM.render(<App title={title} players={players}/>, document.getElementById('app'));
     });
 });
