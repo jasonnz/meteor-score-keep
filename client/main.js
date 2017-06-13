@@ -10,7 +10,7 @@ import Player     from './../imports/ui/Player';
 
 Meteor.startup(()=> {
     Tracker.autorun(()=> {
-        let players = Players.find({}).fetch();
+        let players = Players.find({}, {sort: { score:-1, name:1 }}).fetch();
         let title = 'Score Keep App';
         let subTitle = 'This is the sub title';
         let jsx = (
